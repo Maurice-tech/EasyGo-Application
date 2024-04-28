@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+    jpa:
+      properties:
+        hibernate:
+          format_sql: true
+
+          jdbc:
+            time_zone: UTC+1
+
+            hibernate:
+              ddl-auto: update
+              show-sql: false
+
+  mail:
+    password: ${EMAIL_PASSWORD}
+    username: ${EMAIL_USERNAME}
+    host: smtp.gmail.com
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
