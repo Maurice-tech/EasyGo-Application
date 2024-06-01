@@ -3,7 +3,6 @@ package com.easyGo.easyGo.security;
 import com.easyGo.easyGo.entities.model.UserEntity;
 import com.easyGo.easyGo.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.sql.ast.tree.expression.Collation;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

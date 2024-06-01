@@ -1,5 +1,6 @@
 package com.easyGo.easyGo.security;
 
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
@@ -7,11 +8,10 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
-
 
 import java.security.Key;
 import java.util.Date;
@@ -24,7 +24,7 @@ public class JWTGenerator {
     private final Logger LOG = LoggerFactory.getLogger(JWTGenerator.class);
 
     public String generateToken(Authentication authentication, Long minutes) {
-        String email = authentication.getDeclaringClass().getName();
+        String email = authentication.getName();
         return generateNewToken(email, minutes);
     }
 
@@ -75,4 +75,5 @@ public class JWTGenerator {
             return false;
         }
     }
+
 }

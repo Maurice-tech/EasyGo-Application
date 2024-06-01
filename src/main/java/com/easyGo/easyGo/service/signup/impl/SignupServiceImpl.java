@@ -8,7 +8,8 @@ import com.easyGo.easyGo.exceptions.PasswordMismatchException;
 import com.easyGo.easyGo.payload.request.DriverRequest;
 import com.easyGo.easyGo.payload.request.UserRequest;
 import com.easyGo.easyGo.repositories.UserRepository;
-import com.easyGo.easyGo.service.signup.signupServices;
+import com.easyGo.easyGo.service.signup.SignupServices;
+
 import com.easyGo.easyGo.utils.events.RegistrationCompleteEvent;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +20,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class signupServiceImpl implements signupServices {
+public class SignupServiceImpl implements SignupServices {
     private final UserRepository userRepository;
     private final PasswordEncoder encoder;
     private final ApplicationEventPublisher publisher;

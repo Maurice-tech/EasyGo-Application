@@ -5,9 +5,6 @@ spring:
     url: ${JDBC_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-  #    url: jdbc:postgresql://localhost:5431/karri_go_db
-  #    username: postgres
-  #    password: password
 
   jpa:
     properties:
